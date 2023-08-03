@@ -1,0 +1,55 @@
+<?session_start()?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="
+  https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css
+  " rel="stylesheet">
+  <link rel="stylesheet" href="./main.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="./main.js"></script>
+  <title>typing game</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Typing Master!</h1>
+  </header>
+  <div class="word-display">
+    hello
+  </div>
+  <div class="word-input-box">
+    <input type="text" class="word-input">
+    <span class="good">👍</span>
+  </div>
+  <div class="game-info">
+    <div>남은시간 : <span class="time">0</span>초</div>
+    <div>획득점수 : <span class="score">0</span>점</div>
+  </div>
+  <button class="button loading" onclick="run()">게임을 불러오는 중</button>
+
+  <div id="score_modal">
+    <form action="score.php" method="post">
+      <h2>점수를 기록 하세요!</h2>
+      <div>
+        <label for="new_score">점수 : </label><input type="text" name="new_score" id="new_score" value="0">
+      </div>
+      <div>
+        <label for="name">이름 : </label><input type="text" name="name" id="name">
+      </div>
+      <button class="save" type="submit">확인</button>
+    </form>
+  </div>
+
+
+
+  <div id="score_list">
+    <h2>점수표</h2>
+    <div class="score-item">
+      <? include "score_list.php";?>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+}
+.header {
+  width: 100%;
+  background-color: darkblue;
+  text-align: center;
+  padding: 2rem 0;
+  color: #fff;
+}
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.word-display {
+  margin-top: 3rem;
+  font-size: 80px;
+  color: darkblue;
+}
+
+.word-input-box {
+  position: relative;
+  margin-top: 3rem;
+}
+
+.word-input {
+  padding: .5rem;
+  width: 300px;
+  outline: none;
+}
+
+.game-info {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.time, .score {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.time {
+  color: red;
+}
+.score {
+  color: darkblue;
+}
+
+@keyframes good {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+}
+.good {
+  display: none;
+  font-size: 36px;
+  position: absolute;
+  right: -50px;
+  animation: good .5s ease-in-out;
+}
+
+.button {
+  width: 200px;
+  height: 40px;
+  background-color: darkblue;
+  color: #fff;
+  border: none;
+  margin-top: 3rem;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.loading {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+#score_modal {
+  position: absolute;
+  top: 250px;
+  width: 250px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  background-color: #fff;
+  display: none;
+}
+
+#score_modal form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#score_modal form h2 {
+  font-weight: bold;
+  color: darkblue;
+  margin-bottom: 20px;
+}
+
+#new_score {
+  border: none;
+  background: none;
+  cursor: not-allowed;
+}
+
+#score_list {
+  width: 100%;
+  margin-top: 50px;
+}
+#score_list h2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 20px 0;
+  background-color: darkblue;
+  color: #fff;
+}
+#score_list .score-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+#score_list .score-item ul {
+  background-color: #eee;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
