@@ -17,8 +17,8 @@
 ?>
 
   <ul>
-    <li class="score-item-name"><?=$name?></li>
-    <li class="score-item-score"><?=$score?>점</li>
+    <li class="score-item-name">name : <?=$name?></li>
+    <li class="score-item-score">score : <?=$score?>점</li>
   </ul>
 
 <?
