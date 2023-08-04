@@ -5,7 +5,7 @@
   $name = $_GET['name'];
   $score = $_GET['score'];
 
-  $sql = "select * from top_score order by name desc";
+  $sql = "select * from top_score order by score desc";
   $result = mysqli_query($connect, $sql);
   $total = mysqli_num_rows($result);
 
@@ -14,6 +14,7 @@
     $row = mysqli_fetch_array($result);
     $name = $row['name'];
     $score = $row['score'];
+    
 ?>
 
   <ul>

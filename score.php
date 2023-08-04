@@ -14,6 +14,11 @@
   $result = mysqli_query($connect, $sql);
   $exit = mysqli_num_rows($result);
 
+  if(!$name) {
+    echo "<script>location.href = 'index.html';</script>";
+    return false;
+  }
+
   if($exit){
     $sql = "update top_score set score='$new_score' where name='$name'";
     mysqli_query($connect, $sql);
